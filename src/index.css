@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply m-0 bg-ink font-poppins text-slate-100 antialiased;
+  line-height: 1.6;
+}
+
+* {
+  @apply box-border;
+}
+
+#root {
+  isolation: isolate;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(103, 232, 249, 0.8);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: #ecfeff;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+.heading-glow {
+  @apply bg-gradient-to-r from-cyan-200 via-cyan-400 to-cyan-100 bg-clip-text text-transparent;
+  text-shadow: 0 0 30px rgba(103, 232, 249, 0.3);
+}
+
+.card-surface {
+  @apply rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6 backdrop-blur-sm transition duration-300;
+}
+
+.card-surface:hover {
+  transform: translateY(-2px);
+}
+
+.section-frame {
+  position: relative;
+}
+
+.section-frame::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -22px;
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(103, 232, 249, 0.7), rgba(103, 232, 249, 0));
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fade-up,
+  .fade-up.visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
