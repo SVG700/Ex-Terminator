@@ -2,12 +2,12 @@ import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 const steps = [
-  "Deployment",
-  "Detection using ultrasonic sensors",
-  "Sludge breakdown",
-  "Water jet loosening",
-  "Suction extraction",
-  "Disposal",
+  "Position via Pulley",
+  "Detect Sludge Layer",
+  "Activate Rotating Brush",
+  "Break & Loosen Deposits",
+  "Activate Suction Pump",
+  "Remove & Dispose",
 ];
 
 function HowItWorksSection() {
@@ -15,9 +15,9 @@ function HowItWorksSection() {
     <section id="how-it-works" className="section-shell scroll-mt-28">
       <Reveal delay={130}>
         <SectionHeading
-          eyebrow="Workflow"
+          eyebrow="Cleaning Process"
           title="How Ex-Terminator Works"
-          description="A step-by-step automated process engineered for consistency and safety."
+          description="A six-step automated workflow designed for efficient sludge removal from tank suspension."
           icon="workflow"
         />
 

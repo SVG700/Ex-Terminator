@@ -2,9 +2,13 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import ProblemSection from "./components/ProblemSection";
 import SolutionSection from "./components/SolutionSection";
+import SystemArchitecture from "./components/SystemArchitecture";
 import HowItWorksSection from "./components/HowItWorksSection";
+import LiveData from "./components/LiveData";
 import ComponentsSection from "./components/ComponentsSection";
-import ComparisonSection from "./components/ComparisonSection";
+import EngineeringChallenges from "./components/EngineeringChallenges";
+import InnovationHighlights from "./components/InnovationHighlights";
+import WhyOurApproach from "./components/WhyOurApproach";
 import FutureScopeSection from "./components/FutureScopeSection";
 import TeamSection from "./components/TeamSection";
 import MentorSection from "./components/MentorSection";
@@ -37,14 +41,26 @@ function App() {
         {/* Solution section */}
         <SolutionSection />
 
+        {/* System Architecture section */}
+        <SystemArchitecture />
+
         {/* How it works section */}
         <HowItWorksSection />
+
+        {/* Live system data section */}
+        <LiveData />
 
         {/* Components section */}
         <ComponentsSection />
 
-        {/* Comparison section */}
-        <ComparisonSection />
+        {/* Engineering Challenges section */}
+        <EngineeringChallenges />
+
+        {/* Innovation Highlights section */}
+        <InnovationHighlights />
+
+        {/* Why Our Approach section */}
+        <WhyOurApproach />
 
         {/* Future scope section */}
         <FutureScopeSection />

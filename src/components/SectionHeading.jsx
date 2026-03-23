@@ -29,6 +29,16 @@ const iconMap = {
       strokeLinejoin="round"
     />
   ),
+  live: (
+    <path
+      d="M4 17l4-4 3 3 5-7 4 4M4 7h16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
   components: (
     <path
       d="M8 8h8v8H8zM4 4h4M16 4h4M4 20h4M16 20h4M4 8h4M16 8h4M4 16h4M16 16h4"
@@ -85,6 +95,46 @@ const iconMap = {
       fill="none"
       stroke="currentColor"
       strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
+  architecture: (
+    <path
+      d="M4 6h2v12H4zm7 0h2v12h-2zm7 0h2v12h-2zM4 6h16M4 12h16M4 18h16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
+  challenges: (
+    <path
+      d="M12 2l2 3.5h4l-3 2.5 1 4-3.5-2.5-3.5 2.5 1-4-3-2.5h4l2-3.5zm0 8v6M8 14h8"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
+  innovation: (
+    <path
+      d="M12 2c2 0 3.5 1 4.5 2.5M12 2C9 2 7 3 6 4.5M4 12l2-1 2 2 3-4 2 1M20 12l-2-1-2 2-3-4-2 1M8 16h8v3H8z"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
+  comparison: (
+    <path
+      d="M3 3h8v8H3zm10 0h8v8h-8zM4 13h6v6H4zm8 0h6v6h-6z"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
