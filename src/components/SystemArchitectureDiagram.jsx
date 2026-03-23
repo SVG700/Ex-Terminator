@@ -1,9 +1,9 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
-function SystemArchitecture() {
+function SystemArchitectureDiagram() {
   return (
-    <section id="system-architecture" className="section-shell scroll-mt-28">
+    <section id="system-architecture-diagram" className="section-shell scroll-mt-28">
       <Reveal delay={175}>
         <div className="flex flex-col items-center">
           {/* Section heading */}
@@ -26,7 +26,7 @@ function SystemArchitecture() {
                 <img
                   src="/diagram.png"
                   alt="Cable-Suspended Sludge Removal System Architecture"
-                  className="h-auto w-full transition-transform duration-500 hover:scale-105"
+                  className="h-auto w-full transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
 
@@ -86,5 +86,4 @@ function SystemArchitecture() {
   );
 }
 
-export default SystemArchitecture;
-
+export default SystemArchitectureDiagram;
