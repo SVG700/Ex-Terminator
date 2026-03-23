@@ -2,6 +2,10 @@ import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 function SystemArchitecture() {
+  // Get the base URL from Vite's import.meta.env
+  const basePath = import.meta.env.BASE_URL;
+  const imageSrc = `${basePath}Ex-terminator.png`;
+
   return (
     <section id="system-architecture" className="section-shell scroll-mt-28">
       <Reveal delay={175}>
@@ -22,20 +26,25 @@ function SystemArchitecture() {
               <div className="absolute -inset-4 bg-gradient-to-br from-cyan-500/20 via-transparent to-cyan-500/10 blur-2xl" />
 
               {/* Actual image container */}
-              <div className="relative overflow-hidden rounded-xl bg-black">
+              <div className="relative overflow-hidden rounded-xl bg-black min-h-[400px]">
                 <img
-                  src="/Ex-terminator.png"
+                  src={imageSrc}
                   alt="Cable-Suspended Sludge Removal System Architecture"
-                  className="h-auto w-full transition-transform duration-500 hover:scale-105"
-                  loading="lazy"
+                  className="h-auto w-full transition-transform duration-500 hover:scale-105 object-cover"
+                  loading="eager"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    const fallback = e.currentTarget.nextElementSibling;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
                 />
 
-                {/* Fallback overlay if image doesn't exist */}
-                <div className="absolute inset-0 hidden items-center justify-center bg-slate-950/50 backdrop-blur-sm">
+                {/* Fallback overlay if image doesn't load */}
+                <div className="absolute inset-0 flex items-center justify-center bg-slate-950/50 backdrop-blur-sm">
                   <div className="text-center">
-                    <p className="text-sm text-cyan-300/70">System Diagram</p>
+                    <p className="text-sm text-cyan-300/70">Image Not Found</p>
                     <p className="mt-2 text-xs text-slate-400">
-                      (Loading Ex-terminator.png from public folder)
+                      Ensure /Ex-terminator.png exists in public folder
                     </p>
                   </div>
                 </div>
