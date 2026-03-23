@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 function SystemArchitecture() {
   // Get the base URL from Vite's import.meta.env
   const basePath = import.meta.env.BASE_URL;
-  const imageSrc = `${basePath}Ex-terminator.png`;
+  const imageSrc = `${basePath}Ex-terminator.svg`;
 
   return (
     <section id="system-architecture" className="section-shell scroll-mt-28">
@@ -40,11 +40,11 @@ function SystemArchitecture() {
                 />
 
                 {/* Fallback overlay if image doesn't load */}
-                <div className="absolute inset-0 flex items-center justify-center bg-slate-950/50 backdrop-blur-sm">
+                <div className="absolute inset-0 hidden items-center justify-center bg-slate-950/50 backdrop-blur-sm">
                   <div className="text-center">
                     <p className="text-sm text-cyan-300/70">Image Not Found</p>
                     <p className="mt-2 text-xs text-slate-400">
-                      Ensure /Ex-terminator.png exists in public folder
+                      Ensure /Ex-terminator.svg exists in public folder
                     </p>
                   </div>
                 </div>
