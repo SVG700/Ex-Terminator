@@ -1,0 +1,208 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1419;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2332;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#0a1f3f;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGradient)" />
+
+  <!-- Tank Container -->
+  <g id="tank">
+    <!-- Tank walls -->
+    <rect x="200" y="400" width="800" height="350" fill="none" stroke="#0ea5e9" stroke-width="3" opacity="0.7" rx="10"/>
+    
+    <!-- Water inside tank -->
+    <rect x="205" y="405" width="790" height="340" fill="url(#waterGradient)" opacity="0.4" rx="8"/>
+    
+    <!-- Sludge accumulated at bottom -->
+    <ellipse cx="600" cy="720" rx="380" ry="30" fill="#3b4452" opacity="0.8"/>
+    <path d="M 220 720 Q 600 750 980 720" fill="#2d3436" opacity="0.6"/>
+  </g>
+
+  <!-- Suspension Frame (Top Structure) -->
+  <g id="frame">
+    <!-- Top beam -->
+    <rect x="150" y="80" width="900" height="20" fill="#1a2332" stroke="#0ea5e9" stroke-width="2" rx="4"/>
+    
+    <!-- Left support -->
+    <line x1="200" y1="100" x2="200" y2="380" stroke="#0ea5e9" stroke-width="3" opacity="0.6"/>
+    
+    <!-- Right support -->
+    <line x1="1000" y1="100" x2="1000" y2="380" stroke="#0ea5e9" stroke-width="3" opacity="0.6"/>
+  </g>
+
+  <!-- Main Suspension Rope -->
+  <g id="main-rope">
+    <!-- Horizontal rope (main cable) -->
+    <line x1="200" y1="110" x2="1000" y2="110" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+    
+    <!-- Rope tension markers -->
+    <circle cx="260" cy="110" r="3" fill="#fbbf24" opacity="0.6"/>
+    <circle cx="620" cy="110" r="3" fill="#fbbf24" opacity="0.6"/>
+    <circle cx="940" cy="110" r="3" fill="#fbbf24" opacity="0.6"/>
+  </g>
+
+  <!-- Pulley System -->
+  <g id="pulley">
+    <!-- Pulley wheel -->
+    <circle cx="590" cy="110" r="35" fill="none" stroke="#06b6d4" stroke-width="3"/>
+    <circle cx="590" cy="110" r="28" fill="#0f1419" stroke="#06b6d4" stroke-width="2"/>
+    <circle cx="590" cy="110" r="20" fill="none" stroke="#06b6d4" stroke-width="2" opacity="0.5"/>
+    <circle cx="590" cy="110" r="8" fill="#22d3ee"/>
+    
+    <!-- Pulley rotation indicator -->
+    <path d="M 585 90 L 590 82 L 595 90" fill="#22d3ee" opacity="0.8"/>
+  </g>
+
+  <!-- Suspension Cables from Pulley to Robot -->
+  <g id="suspension-cables">
+    <!-- Left cable -->
+    <line x1="560" y1="145" x2="480" y2="280" stroke="#06b6d4" stroke-width="2.5" opacity="0.8"/>
+    
+    <!-- Right cable -->
+    <line x1="620" y1="145" x2="700" y2="280" stroke="#06b6d4" stroke-width="2.5" opacity="0.8"/>
+  </g>
+
+  <!-- Robot Body -->
+  <g id="robot">
+    <!-- Main body -->
+    <rect x="470" y="280" width="240" height="120" fill="#1a2332" stroke="#22d3ee" stroke-width="2.5" rx="8" opacity="0.95"/>
+    
+    <!-- Status lights -->
+    <circle cx="500" cy="310" r="5" fill="#10b981"/> <!-- Green - Active -->
+    <circle cx="740" cy="310" r="5" fill="#f59e0b"/> <!-- Amber - Running -->
+    
+    <!-- Motor indicator -->
+    <rect x="500" y="340" width="160" height="35" fill="#0f1419" stroke="#06b6d4" stroke-width="2" rx="4"/>
+    <text x="590" y="365" font-family="Arial, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" opacity="0.8">Motor Control</text>
+  </g>
+
+  <!-- Attachment points -->
+  <g id="attachments">
+    <circle cx="480" cy="280" r="6" fill="#ec4899" opacity="0.9"/>
+    <circle cx="700" cy="280" r="6" fill="#ec4899" opacity="0.9"/>
+  </g>
+
+  <!-- Rotating Brush Assembly (inside robot, extends down) -->
+  <g id="brush-assembly">
+    <!-- Brush motor -->
+    <circle cx="590" cy="430" r="18" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    <circle cx="590" cy="430" r="12" fill="#0f1419" stroke="#22d3ee" stroke-width="1.5"/>
+    
+    <!-- Rotating brush (animated look with spokes) -->
+    <g opacity="0.9">
+      <circle cx="590" cy="450" r="28" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="5,5"/>
+      <line x1="590" y1="422" x2="590" y2="478" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+      <line x1="562" y1="450" x2="618" y2="450" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+      <line x1="568" y1="428" x2="612" y2="472" stroke="#f59e0b" stroke-width="2" opacity="0.4"/>
+      <line x1="612" y1="428" x2="568" y2="472" stroke="#f59e0b" stroke-width="2" opacity="0.4"/>
+    </g>
+    
+    <!-- Connection pipe from robot to brush -->
+    <rect x="585" y="400" width="10" height="30" fill="#1a2332" stroke="#06b6d4" stroke-width="1.5"/>
+  </g>
+
+  <!-- Suction Pipe System -->
+  <g id="suction-system">
+    <!-- Main vertical suction pipe -->
+    <rect x="650" y="350" width="20" height="300" fill="none" stroke="#ef4444" stroke-width="3" opacity="0.85"/>
+    
+    <!-- Pipe segments -->
+    <line x1="660" y1="360" x2="660" y2="390" stroke="#ef4444" stroke-width="1.5" opacity="0.4"/>
+    <line x1="660" y1="410" x2="660" y2="440" stroke="#ef4444" stroke-width="1.5" opacity="0.4"/>
+    <line x1="660" y1="460" x2="660" y2="490" stroke="#ef4444" stroke-width="1.5" opacity="0.4"/>
+    <line x1="660" y1="510" x2="660" y2="540" stroke="#ef4444" stroke-width="1.5" opacity="0.4"/>
+    <line x1="660" y1="560" x2="660" y2="620" stroke="#ef4444" stroke-width="1.5" opacity="0.4"/>
+    
+    <!-- Suction inlet (at bottom in tank) -->
+    <circle cx="660" cy="640" r="8" fill="#ef4444" opacity="0.8"/>
+    <circle cx="660" cy="640" r="5" fill="#1a2332" stroke="#ef4444" stroke-width="1"/>
+  </g>
+
+  <!-- Sludge Transport Path Outside Tank -->
+  <g id="sludge-transport">
+    <!-- Horizontal discharge pipe -->
+    <path d="M 660 360 Q 750 320 850 280" fill="none" stroke="#ef4444" stroke-width="3" opacity="0.85"/>
+    
+    <!-- Discharge particles animation indicator -->
+    <circle cx="750" cy="310" r="4" fill="#dc2626" opacity="0.7"/>
+    <circle cx="800" cy="290" r="3" fill="#dc2626" opacity="0.5"/>
+    <circle cx="850" cy="280" r="4" fill="#dc2626" opacity="0.8"/>
+  </g>
+
+  <!-- Collection Bucket -->
+  <g id="bucket">
+    <!-- Bucket body -->
+    <path d="M 820 260 L 810 340 L 890 340 L 880 260 Z" fill="none" stroke="#0ea5e9" stroke-width="2.5" opacity="0.9"/>
+    
+    <!-- Bucket handle -->
+    <path d="M 820 260 Q 850 200 880 260" fill="none" stroke="#0ea5e9" stroke-width="2" opacity="0.7"/>
+    
+    <!-- Sludge inside bucket -->
+    <path d="M 815 320 L 885 320 Z" fill="#3b4452" opacity="0.6"/>
+    
+    <!-- Bucket base -->
+    <ellipse cx="850" cy="340" rx="40" ry="8" fill="#1a2332" stroke="#0ea5e9" stroke-width="2" opacity="0.8"/>
+  </g>
+
+  <!-- Sensor annotations -->
+  <g id="sensors" opacity="0.7">
+    <!-- Ultrasonic sensor indicators -->
+    <g>
+      <circle cx="520" cy="320" r="4" fill="#8b5cf6"/>
+      <text x="520" y="295" font-family="Arial, sans-serif" font-size="11" fill="#8b5cf6" text-anchor="middle">Sensor 1</text>
+    </g>
+    <g>
+      <circle cx="660" cy="320" r="4" fill="#8b5cf6"/>
+      <text x="660" y="295" font-family="Arial, sans-serif" font-size="11" fill="#8b5cf6" text-anchor="middle">Sensor 2</text>
+    </g>
+    <g>
+      <circle cx="740" cy="320" r="4" fill="#8b5cf6"/>
+      <text x="740" y="295" font-family="Arial, sans-serif" font-size="11" fill="#8b5cf6" text-anchor="middle">Sensor 3</text>
+    </g>
+  </g>
+
+  <!-- Legend -->
+  <g id="legend" opacity="0.85">
+    <text x="150" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#22d3ee">System Architecture Diagram</text>
+    
+    <g id="legend-items">
+      <!-- Suspension rope -->
+      <line x1="150" y1="770" x2="180" y2="770" stroke="#fbbf24" stroke-width="3"/>
+      <text x="190" y="775" font-family="Arial, sans-serif" font-size="12" fill="#e5e7eb">Main Suspension Rope</text>
+      
+      <!-- Suction pipe -->
+      <line x1="500" y1="770" x2="530" y2="770" stroke="#ef4444" stroke-width="3"/>
+      <text x="540" y="775" font-family="Arial, sans-serif" font-size="12" fill="#e5e7eb">Suction Pipe</text>
+      
+      <!-- Brush rotation -->
+      <circle cx="810" cy="770" r="8" fill="none" stroke="#f59e0b" stroke-width="2"/>
+      <text x="830" y="775" font-family="Arial, sans-serif" font-size="12" fill="#e5e7eb">Rotating Brush</text>
+    </g>
+  </g>
+
+  <!-- Safety annotations -->
+  <g id="annotations" opacity="0.6">
+    <!-- Movement indicator -->
+    <g>
+      <path d="M 350 120 L 320 120" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowgreen)"/>
+      <text x="300" y="140" font-family="Arial, sans-serif" font-size="11" fill="#10b981" text-anchor="middle">Pulley Motion</text>
+    </g>
+  </g>
+
+  <!-- Arrow markers for flow direction -->
+  <defs>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#10b981"/>
+    </marker>
+  </defs>
+</svg>

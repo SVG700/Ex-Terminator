@@ -24,18 +24,18 @@ function SystemArchitecture() {
               {/* Actual image container */}
               <div className="relative overflow-hidden rounded-xl bg-black">
                 <img
-                  src="/diagram.png"
+                  src="/diagram.svg"
                   alt="Cable-Suspended Sludge Removal System Architecture"
                   className="h-auto w-full transition-transform duration-500 hover:scale-105"
                   loading="lazy"
                 />
 
                 {/* Fallback overlay if image doesn't exist */}
-                <div className="absolute inset-0 flex items-center justify-center bg-slate-950/50 backdrop-blur-sm">
+                <div className="absolute inset-0 hidden items-center justify-center bg-slate-950/50 backdrop-blur-sm">
                   <div className="text-center">
                     <p className="text-sm text-cyan-300/70">System Diagram</p>
                     <p className="mt-2 text-xs text-slate-400">
-                      (Add /diagram.png in public/assets folder)
+                      (Loading diagram.svg from public folder)
                     </p>
                   </div>
                 </div>
