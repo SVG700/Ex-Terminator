@@ -4,7 +4,8 @@ import SectionHeading from "./SectionHeading";
 function SystemArchitecture() {
   // Get the base URL from Vite's import.meta.env
   const basePath = import.meta.env.BASE_URL;
-  const imageSrc = `${basePath}Ex-terminator.svg`;
+  // Cache-busting query ensures GitHub Pages serves the latest uploaded SVG.
+  const imageSrc = `${basePath}Ex-terminator.svg?v=20260323-1`;
 
   return (
     <section id="system-architecture" className="section-shell scroll-mt-28">
