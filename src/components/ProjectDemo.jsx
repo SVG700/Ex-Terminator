@@ -1,21 +1,23 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
+const basePath = import.meta.env.BASE_URL;
+
 // Video data for the demo section
 const demoVideos = [
   {
-    id: "movement",
-    label: "System Movement",
-    description: "Robot moves along the cable using pulley-driven mechanism for precise positioning",
-    src: "/Ex-Terminator/videos/demo1.mp4",
-    poster: "/Ex-Terminator/favicon.svg",
+    id: "demo-clip-1",
+    label: "System Demo Clip 1",
+    description: "Cable-suspended Ex-Terminator operation demo.",
+    src: `${basePath}videos/demo1.mp4`,
+    poster: `${basePath}favicon.svg`,
   },
   {
-    id: "cleaning",
-    label: "Sludge Cleaning Process",
-    description: "Rotating brush breaks sludge while suction pump removes slurry efficiently",
-    src: "/Ex-Terminator/videos/demo2.mp4",
-    poster: "/Ex-Terminator/favicon.svg",
+    id: "demo-clip-2",
+    label: "System Demo Clip 2",
+    description: "Cable-suspended Ex-Terminator operation demo.",
+    src: `${basePath}videos/demo2.mp4`,
+    poster: `${basePath}favicon.svg`,
   },
 ];
 
@@ -80,10 +82,9 @@ function ProjectDemo() {
           {/* Instructions below videos */}
           <div className="mt-12 rounded-lg border border-cyan-300/20 bg-slate-900/40 p-6 max-w-2xl w-full">
             <p className="text-sm text-slate-300 leading-relaxed">
-              <span className="font-semibold text-cyan-300">📹 Demo Features:</span> Both videos demonstrate
-              key operational components of the Ex-Terminator system. The first shows precise pulley-driven
-              movement along the suspension rope, while the second demonstrates the integrated brush and suction
-              mechanism working in tandem to remove sludge efficiently.
+              <span className="font-semibold text-cyan-300">Demo Note:</span> Both clips show the same
+              Ex-Terminator workflow from similar runs. They are intentionally labeled as clip 1 and clip 2
+              for clean presentation.
             </p>
           </div>
         </div>
