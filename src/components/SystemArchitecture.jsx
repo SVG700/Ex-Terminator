@@ -24,7 +24,7 @@ function SystemArchitecture() {
               {/* Actual image container */}
               <div className="relative overflow-hidden rounded-xl bg-black">
                 <img
-                  src="/diagram.svg"
+                  src="/Ex-terminator.png"
                   alt="Cable-Suspended Sludge Removal System Architecture"
                   className="h-auto w-full transition-transform duration-500 hover:scale-105"
                   loading="lazy"
@@ -35,7 +35,7 @@ function SystemArchitecture() {
                   <div className="text-center">
                     <p className="text-sm text-cyan-300/70">System Diagram</p>
                     <p className="mt-2 text-xs text-slate-400">
-                      (Loading diagram.svg from public folder)
+                      (Loading Ex-terminator.png from public folder)
                     </p>
                   </div>
                 </div>
