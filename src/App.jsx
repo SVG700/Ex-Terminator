@@ -6,6 +6,7 @@ import SystemArchitecture from "./components/SystemArchitecture";
 import HowItWorksSection from "./components/HowItWorksSection";
 import LiveData from "./components/LiveData";
 import ComponentsSection from "./components/ComponentsSection";
+import ProjectDemo from "./components/ProjectDemo";
 import EngineeringChallenges from "./components/EngineeringChallenges";
 import InnovationHighlights from "./components/InnovationHighlights";
 import WhyOurApproach from "./components/WhyOurApproach";
@@ -52,6 +53,9 @@ function App() {
 
         {/* Components section */}
         <ComponentsSection />
+
+          {/* Project Demo section */}
+          <ProjectDemo />
 
         {/* Engineering Challenges section */}
         <EngineeringChallenges />

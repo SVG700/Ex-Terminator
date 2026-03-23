@@ -139,6 +139,16 @@ const iconMap = {
       strokeLinejoin="round"
     />
   ),
+  demo: (
+    <path
+      d="M4 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm4 10v3m4-3v3m4-3v3M10 9l2 2 4-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
 };
 
 function SectionHeading({ eyebrow, title, description, icon }) {
