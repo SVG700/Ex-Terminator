@@ -3,34 +3,24 @@ import SectionHeading from "./SectionHeading";
 
 const highlights = [
   {
-    icon: "🔗",
-    title: "Cable-Based Movement",
-    description: "Pulley-driven suspension eliminates tracks, wheels, and treads. Single axis of movement simplifies control and increases reliability to 99.8%."
+    icon: "A",
+    title: "Above-Water Cleaning System",
+    description: "The robot operates above sludge surfaces, avoiding hazardous immersion and simplifying maintenance access."
   },
   {
-    icon: "⚙️",
+    icon: "N",
+    title: "No Direct Water Contact",
+    description: "Suspended operation minimizes corrosion risk and improves long-term durability in harsh sewage environments."
+  },
+  {
+    icon: "H",
     title: "Hybrid Cleaning Mechanism",
-    description: "Rotating brush breaks deposits while integrated suction pump removes slurry. Dual-action cleaning improves efficiency by 340% vs single method."
+    description: "A rotating brush disrupts sludge while a suction unit extracts slurry, delivering consistent cleaning throughput."
   },
   {
-    icon: "🛡️",
-    title: "Zero Water Contact Design",
-    description: "Suspended platform never submerges. Eliminates corrosion, extends component life to 15+ years, and eliminates salt water degradation."
-  },
-  {
-    icon: "👥",
-    title: "No Human Entry Required",
-    description: "Remote operation from control station. Eliminates confined space entry procedures, reducing operational risk by 100%."
-  },
-  {
-    icon: "🔧",
-    title: "Modular & Maintainable",
-    description: "All components accessible from top. Easy replacement of motors, pumps, and sensors without dismantling the entire system."
-  },
-  {
-    icon: "📊",
-    title: "Real-Time Telemetry",
-    description: "Comprehensive sensor fusion provides live data on system state, operational metrics, and predictive maintenance alerts."
+    icon: "F",
+    title: "Future-Ready Scalable Design",
+    description: "The architecture supports a drone-assisted deployment extension for closed tanks without redesigning core cleaning logic."
   },
 ];
 
@@ -41,7 +31,7 @@ function InnovationHighlights() {
         <SectionHeading
           eyebrow="Key Innovations"
           title="What Makes Ex-Terminator Different"
-          description="Six fundamental innovations that set this system apart from conventional sludge removal approaches."
+          description="Core innovations that make the current prototype practical today and scalable for future deployment models."
           icon="innovation"
         />
 

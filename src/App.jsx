@@ -2,11 +2,13 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import ProblemSection from "./components/ProblemSection";
 import SolutionSection from "./components/SolutionSection";
+import SystemVariants from "./components/SystemVariants";
 import SystemArchitecture from "./components/SystemArchitecture";
 import HowItWorksSection from "./components/HowItWorksSection";
 import LiveData from "./components/LiveData";
 import ComponentsSection from "./components/ComponentsSection";
 import ProjectDemo from "./components/ProjectDemo";
+import ScalabilityFutureVision from "./components/ScalabilityFutureVision";
 import EngineeringChallenges from "./components/EngineeringChallenges";
 import InnovationHighlights from "./components/InnovationHighlights";
 import WhyOurApproach from "./components/WhyOurApproach";
@@ -42,8 +44,14 @@ function App() {
         {/* Solution section */}
         <SolutionSection />
 
+        {/* System variants section */}
+        <SystemVariants />
+
         {/* System Architecture section */}
         <SystemArchitecture />
+
+        {/* Scalability and future vision section */}
+        <ScalabilityFutureVision />
 
         {/* How it works section */}
         <HowItWorksSection />

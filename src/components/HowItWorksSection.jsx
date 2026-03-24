@@ -2,12 +2,12 @@ import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 const steps = [
-  "Position via Pulley",
-  "Detect Sludge Layer",
-  "Activate Rotating Brush",
-  "Break & Loosen Deposits",
-  "Activate Suction Pump",
-  "Remove & Dispose",
+  "Move along rope to target zone",
+  "Stop with precise pulley alignment",
+  "Activate rotating brush module",
+  "Break and loosen sludge deposits",
+  "Start suction pump and collect slurry",
+  "Complete cycle and reposition",
 ];
 
 function HowItWorksSection() {
@@ -16,8 +16,8 @@ function HowItWorksSection() {
       <Reveal delay={130}>
         <SectionHeading
           eyebrow="Cleaning Process"
-          title="How Ex-Terminator Works"
-          description="A six-step automated workflow designed for efficient sludge removal from tank suspension."
+          title="How the Current Cable System Works"
+          description="This implemented workflow represents the active open-tank prototype and does not include the future drone extension."
           icon="workflow"
         />
 

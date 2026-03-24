@@ -109,6 +109,26 @@ const iconMap = {
       strokeLinejoin="round"
     />
   ),
+  variants: (
+    <path
+      d="M4 4h7v7H4zm9 0h7v7h-7zM4 13h7v7H4zm9 0h7v7h-7z"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
+  scalability: (
+    <path
+      d="M4 18h16M6 14l3-3 3 2 4-5 2 2"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  ),
   challenges: (
     <path
       d="M12 2l2 3.5h4l-3 2.5 1 4-3.5-2.5-3.5 2.5 1-4-3-2.5h4l2-3.5zm0 8v6M8 14h8"

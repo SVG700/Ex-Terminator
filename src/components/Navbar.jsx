@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 const navItems = [
   { label: "Problem", target: "problem" },
   { label: "Solution", target: "solution" },
+  { label: "Variants", target: "system-variants" },
   { label: "Architecture", target: "system-architecture" },
+  { label: "Scalability", target: "scalability-vision" },
   { label: "How It Works", target: "how-it-works" },
   { label: "Live Data", target: "live-data" },
   { label: "Components", target: "components" },
@@ -19,7 +21,9 @@ const navItems = [
 const navIcons = {
   problem: "M12 3l9 16H3l9-16zm0 6v4m0 3h.01",
   solution: "M6 12l4 4 8-8M12 3a9 9 0 100 18 9 9 0 000-18z",
+  "system-variants": "M4 4h7v7H4zm9 0h7v7h-7zM4 13h7v7H4zm9 0h7v7h-7z",
   "system-architecture": "M4 6h2v12H4zm7 0h2v12h-2zm7 0h2v12h-2zM4 6h16M4 12h16M4 18h16",
+  "scalability-vision": "M4 18h16M6 14l3-3 3 2 4-5 2 2",
   "how-it-works": "M4 7h10m0 0l-3-3m3 3l-3 3M20 17H10m0 0l3-3m-3 3l3 3",
   "live-data": "M4 17l4-4 3 3 5-7 4 4M4 7h16",
   components: "M8 8h8v8H8zM4 4h4M16 4h4M4 20h4M16 20h4",
