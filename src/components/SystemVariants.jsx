@@ -70,6 +70,33 @@ function SystemVariants() {
                 ))}
               </ul>
 
+              {variant.title === "Open Tank System" && (
+                <div className="mt-6 rounded-xl border border-dashed border-cyan-300/35 bg-slate-900/45 p-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300/80">
+                    Open Tank Cleaning Visualization
+                  </p>
+                  <div className="mt-3 overflow-hidden rounded-lg border border-cyan-300/20 bg-slate-950/70">
+                    {/* Upload image as /public/open-tank-system.svg to show here. */}
+                    <img
+                      src={`${basePath}open-tank-system.svg`}
+                      alt="Open tank cleaning system"
+                      className="h-auto w-full object-cover"
+                      loading="eager"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                        const fallback = e.currentTarget.nextElementSibling;
+                        if (fallback) fallback.style.display = "grid";
+                      }}
+                    />
+                    <div className="hidden min-h-28 place-items-center p-4">
+                      <p className="text-center text-sm text-slate-400">
+                        Upload open-tank-system.svg to show open tank image
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {variant.title === "Closed Tank Concept" && (
                 <div className="mt-6 rounded-xl border border-dashed border-cyan-300/35 bg-slate-900/45 p-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300/80">
