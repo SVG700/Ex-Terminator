@@ -1,6 +1,8 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
+const basePath = import.meta.env.BASE_URL;
+
 const variants = [
   {
     title: "Open Tank System",
@@ -73,10 +75,24 @@ function SystemVariants() {
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300/80">
                     Drone Concept Visualization
                   </p>
-                  <div className="mt-3 grid min-h-28 place-items-center rounded-lg border border-cyan-300/20 bg-slate-950/70">
-                    <p className="text-center text-sm text-slate-400">
-                      Placeholder for future drone-assisted deployment render
-                    </p>
+                  <div className="mt-3 overflow-hidden rounded-lg border border-cyan-300/20 bg-slate-950/70">
+                    {/* Use uploaded drone concept SVG from public folder. */}
+                    <img
+                      src={`${basePath}drone-concept.svg`}
+                      alt="Drone-assisted deployment concept"
+                      className="h-auto w-full object-cover"
+                      loading="eager"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                        const fallback = e.currentTarget.nextElementSibling;
+                        if (fallback) fallback.style.display = "grid";
+                      }}
+                    />
+                    <div className="hidden min-h-28 place-items-center p-4">
+                      <p className="text-center text-sm text-slate-400">
+                        Unable to load drone-concept.svg
+                      </p>
+                    </div>
                   </div>
                 </div>
               )}
