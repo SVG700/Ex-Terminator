@@ -4,8 +4,8 @@ import SectionHeading from "./SectionHeading";
 function SystemArchitecture() {
   // Get the base URL from Vite's import.meta.env
   const basePath = import.meta.env.BASE_URL;
-  // Cache-busting query ensures GitHub Pages serves the latest uploaded SVG.
-  const imageSrc = `${basePath}Ex-terminator.svg?v=20260323-1`;
+  // Use a new filename to bypass stale CDN caches on previous SVG path.
+  const imageSrc = `${basePath}Ex-terminator-v2.svg`;
 
   return (
     <section id="system-architecture" className="section-shell scroll-mt-28">
@@ -45,7 +45,7 @@ function SystemArchitecture() {
                   <div className="text-center">
                     <p className="text-sm text-cyan-300/70">Image Not Found</p>
                     <p className="mt-2 text-xs text-slate-400">
-                      Ensure /Ex-terminator.svg exists in public folder
+                      Ensure /Ex-terminator-v2.svg exists in public folder
                     </p>
                   </div>
                 </div>
