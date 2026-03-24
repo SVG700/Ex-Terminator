@@ -1,36 +1,63 @@
 import Reveal from "./Reveal";
-import SectionHeading from "./SectionHeading";
+import ComponentCard from "./ComponentCard";
 
-const hardware = [
-  "ESP32 Microcontroller (x4)",
-  "Drone Motors - Brush Drive",
-  "DC Gear Motor - Pulley",
-  "Servo Motors - Precision Control",
-  "Ultrasonic Sensors (x3)",
-  "HD Cameras (x2)",
-  "Centrifugal Pump System",
-  "High-Capacity Battery Pack",
+const components = [
+  {
+    name: "ESP32 Microcontroller",
+    description: "Control Unit",
+    iconLabel: "MCU",
+  },
+  {
+    name: "Breadboard",
+    description: "Prototyping Platform",
+    iconLabel: "BRD",
+  },
+  {
+    name: "DC Motors",
+    description: "Movement Mechanism",
+    iconLabel: "MTR",
+  },
+  {
+    name: "DC Pump Motor",
+    description: "Sludge Suction",
+    iconLabel: "PMP",
+  },
+  {
+    name: "7.4V Li-ion Battery",
+    description: "Power Supply",
+    iconLabel: "BAT",
+  },
+  {
+    name: "Jumper Wires",
+    description: "Electrical Connections",
+    iconLabel: "WR",
+  },
 ];
 
 function ComponentsSection() {
   return (
-    <section id="components" className="section-shell scroll-mt-28">
+    <section id="components" className="section-shell scroll-mt-28 py-2">
       <Reveal delay={160}>
-        <SectionHeading
-          eyebrow="Hardware Stack"
-          title="Components Powering the System"
-          description="Industrial-grade components selected for reliability, precision control, and long operational life in harsh environments."
-          icon="components"
-        />
+        <div className="mb-12 text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/80">Hardware Stack</p>
+          <h2 className="heading-glow mt-3 text-3xl font-bold leading-tight sm:text-4xl lg:text-[2.6rem]">
+            Components Used
+          </h2>
+          <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">
+            Key hardware components used in building the Ex-Terminator system
+          </p>
+        </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {hardware.map((item) => (
-            <article 
-              key={item} 
-              className="card-surface py-6 px-4 text-center group hover:border-cyan-300/45 hover:shadow-neon hover:-translate-y-1"
-            >
-              <h3 className="font-semibold text-slate-100 group-hover:text-cyan-200 transition">{item}</h3>
-            </article>
+        {/* Responsive grid: mobile 1, tablet 2, desktop 3 cards. */}
+        <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {components.map((item, index) => (
+            <ComponentCard
+              key={item.name}
+              name={item.name}
+              description={item.description}
+              iconLabel={item.iconLabel}
+              delay={index * 60}
+            />
           ))}
         </div>
       </Reveal>
